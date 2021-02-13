@@ -19,19 +19,25 @@ void printlist(node_t *head)
     }
     printf("\n");
 }
-
+node_t *creat_new_node(int value)
+{
+    node_t *result = malloc(sizeof(node_t));
+    result->value = value;
+    result->next = NULL;
+    return result;
+}
 int main()
 {
-    node_t n1, n2, n3;
-    node_t *head;
-    n1.value = 32;
-    n2.value = 10;
-    n3.value = 68;
-    head = &n1;
-    n1.next = &n2;
-    n2.next = &n3;
-    n3.next=NULL;
-    
+    node_t *head, *tmp;
+    tmp = creat_new_node(23);
+    head = tmp;
+    tmp = creat_new_node(12);
+    tmp->next = head;
+    head = tmp;
+    tmp = creat_new_node(45);
+    tmp->next = head;
+    head = tmp;
+
     printlist(head);
     return 0;
 }
