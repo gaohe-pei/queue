@@ -54,7 +54,6 @@ int dequeue(queue *q)
     {
         q->tail = NULL;
     }
-    
     free(tmp);
     return result;
 }
