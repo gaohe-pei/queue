@@ -1,13 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct node
+typedef struct node
 {
     int value;
     struct node *next;
-};
-
-typedef struct node node_t;
+}node_t;
 
 void printlist(node_t *head)
 {
